@@ -40,8 +40,8 @@ body {
    ========================================== */
 
 .header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -54,25 +54,20 @@ body {
     padding: 15px 0;
 }
 
-.logo h1 {
-    font-size: 24px;
-    color: var(--secondary-color);
-    font-weight: 700;
-    letter-spacing: -0.5px;
+.logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-}
-
-.logo-svg {
-    width: 50px;
-    height: 50px;
-    background-color: var(--secondary-color);
-    padding: 8px;
-    border-radius: 6px;
 }
 
 .nav ul {
@@ -83,10 +78,11 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    opacity: 0.9;
 }
 
 .nav a:hover {
@@ -206,9 +202,10 @@ body {
 .image-placeholder::after {
     content: '';
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M 100 30 L 160 60 L 160 140 L 100 170 L 40 140 L 40 60 Z' fill='none' stroke='%23e6c200' stroke-width='3'/%3E%3Cellipse cx='100' cy='90' rx='16' ry='24' fill='%23e6c200'/%3E%3Ccircle cx='100' cy='60' r='10' fill='%23e6c200'/%3E%3Cline x1='96' y1='52' x2='88' y2='38' stroke='%23e6c200' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='104' y1='52' x2='112' y2='38' stroke='%23e6c200' stroke-width='3' stroke-linecap='round'/%3E%3Cellipse cx='82' cy='84' rx='12' ry='20' fill='%23e6c200' opacity='0.5' transform='rotate(-30 82 84)'/%3E%3Cellipse cx='118' cy='84' rx='12' ry='20' fill='%23e6c200' opacity='0.5' transform='rotate(30 118 84)'/%3E%3Crect x='94' y='75' width='4' height='30' fill='%234a1a5c'/%3E%3Crect x='102' y='75' width='4' height='30' fill='%234a1a5c'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+    width: 280px;
+    height: 280px;
+    background: url("Logo.png") center/contain no-repeat;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
 /* ==========================================
