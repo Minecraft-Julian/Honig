@@ -2,27 +2,27 @@
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
-        
+
         // Validate form
         if (!name || !email || !message) {
             alert('Bitte füllen Sie alle erforderlichen Felder aus.');
             return;
         }
-        
+
         // Validate email
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
             alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
             return;
         }
-        
+
         // Log form data (in production, this would be sent to a server)
         console.log('Formular Daten:', {
             name,
@@ -31,13 +31,13 @@ if (contactForm) {
             message,
             timestamp: new Date().toLocaleString('de-DE')
         });
-        
+
         // Show success message
         alert('Vielen Dank! Ihre Nachricht wurde erfolgreich versendet. Wir werden Sie bald kontaktieren.');
-        
+
         // Reset form
         contactForm.reset();
-        
+
         // In production, you would send this data to your backend
         // Example with fetch:
         // fetch('/api/contact', {
@@ -55,7 +55,7 @@ if (contactForm) {
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href !== '#' && document.querySelector(href)) {
             // Link is valid, smooth scroll is handled by CSS
@@ -70,13 +70,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add active class to navigation based on scroll position
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY + 100;
-    
+
     document.querySelectorAll('section[id]').forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             const sectionId = section.getAttribute('id');
             document.querySelectorAll('.nav a').forEach(link => {
@@ -96,7 +96,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
@@ -122,4 +122,4 @@ const toggleMobileMenu = () => {
 // Log page load
 console.log('Hannes Bio Honig Website geladen');
 console.log('Telefon: +41 (0) 123 456 789');
-console.log('E-Mail: info@hannesbiohmig.ch');
+console.log('E-Mail: ytneojulian@gmail.com');
