@@ -11,7 +11,7 @@ if (contactForm) {
         const message = document.getElementById('message').value;
 
         // Validate form
-        if (!name || !email || !message) {
+        if (!email || !message) {
             alert('Bitte füllen Sie alle erforderlichen Felder aus.');
             return;
         }
@@ -121,5 +121,5 @@ const toggleMobileMenu = () => {
 
 // Log page load
 console.log('Hannes Bio Honig Website geladen');
-console.log('Telefon: +41 (0) 123 456 789');
+console.log('Telefon: +49 (0) 176 45765373');
 console.log('E-Mail: ytneojulian@gmail.com');
